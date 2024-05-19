@@ -100,19 +100,21 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval $(thefuck --alias)
-
-export PATH=$PATH:"/Applications/Racket v8.8/bin"
-
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 alias python="python3"
 alias py="python3"
 alias vim="nvim"
+alias cht.sh="~/.local/bin/cht.sh"
 bindkey -v
-bindkey '^Y' autosuggest-accept
-
-eval "$(starship init zsh)"
 
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+export PATH=$PATH:/Users/tkamat/.cargo/bin
+
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+eval "$(starship init zsh)"
