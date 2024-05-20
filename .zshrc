@@ -109,6 +109,8 @@ alias vim="nvim"
 alias cht.sh="~/.local/bin/cht.sh"
 bindkey -v
 
+ZVM_CURSOR_STYLE_ENABLED=false
+
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 export PATH=$PATH:/Users/tkamat/.cargo/bin
 
@@ -118,3 +120,5 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 eval "$(starship init zsh)"
+
+export PATH=$PATH:/Users/tkamat/.spicetify
