@@ -1,5 +1,76 @@
 palette = "catppuccin_mocha"
 
+format = """
+[](subtext0)\
+[  ](bg:subtext0 fg:crust)\
+[](bg:mauve fg:subtext0)\
+$directory\
+[](fg:mauve bg:surface1)\
+$git_branch\
+$git_status\
+[](fg:surface1 bg:surface0)\
+$nodejs\
+$rust\
+$golang\
+$java\
+$python\
+[](fg:surface0 bg:mantle)\
+$time\
+[ ](fg:mantle)\
+\n$character"""
+
+[directory]
+style = "fg:surface0 bg:mauve"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:surface1"
+format = '[[ $symbol $branch ](fg:lavender bg:surface1)]($style)'
+
+[git_status]
+style = "bg:surface1"
+format = '[[($all_status$ahead_behind )](fg:lavender bg:surface1)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:surface0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface0)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:surface0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface0)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:surface0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface0)]($style)'
+
+[java]
+symbol = ""
+style = "bg:surface0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface0)]($style)'
+
+[python]
+symbol = ""
+style = "bg:surface0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface0)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:mantle"
+format = '[[  $time ](fg:text bg:mantle)]($style)'
+
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
